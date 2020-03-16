@@ -92,7 +92,7 @@ void printTable(unsigned int table[N][N]){
 	for (; iIndex < N; ++iIndex){
 		printf(" ");
 		for (jIndex = 0; jIndex < N; ++jIndex){
-			printf("%d ", table[iIndex][jIndex]);
+			printf("%2d ", table[iIndex][jIndex]);
 		}
 		printf("\r\n");
 	}
