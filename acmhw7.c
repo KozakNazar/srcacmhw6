@@ -76,7 +76,8 @@ void removeMarker(void * data, void * globalContext){
 	unsigned int(*positions)[2] = (unsigned int(*)[2])globalContext;
 	unsigned int positionIndex, (*table)[N] = (unsigned int(*)[N])data;
 
-	for (positionIndex = 0; positions[positionIndex][1] /**/ && positions[positionIndex][0]/**/; ++positionIndex);
+	for (positionIndex = 0; positions[positionIndex][1] /**/ && positions[positionIndex][0]/**/; ++positionIndex)
+		;
 		if (positionIndex){		
 			--positionIndex;	
 			table[positions[positionIndex][1] - 1][positions[positionIndex][0] - 1] = 0;
