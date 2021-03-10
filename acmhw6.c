@@ -1,6 +1,6 @@
 /*****************************************************************************
 * N.Kozak // Lviv'2020 // ACM // Eight queens puzzle by backtracking example *
-*    file: acmhw7.c                                                        *
+*    file: acmhw6.c                                                          *
 ******************************************************************************/
 #include "stdio.h"
 #ifdef __linux__ 
