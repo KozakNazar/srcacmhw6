@@ -3,8 +3,8 @@
 *    file: acmhw6.c                                                          *
 ******************************************************************************/
 #include "stdio.h"
-#ifdef __linux__ 
-#elif defined(_WIN32)    
+#if defined(__linux__) || defined(__unix__) || defined(__APPLE__) 
+#elif defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)    
 #include "windows.h"
 #else
 #endif
@@ -128,9 +128,9 @@ int main(){
 
 	printTable(table);
 
-#ifdef __linux__ 
+#if defined(__linux__) || defined(__unix__) || defined(__APPLE__)
 	(void)getchar();
-#elif defined(_WIN32)    
+#elif defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)    
 	system("pause");
 #else
 #endif
