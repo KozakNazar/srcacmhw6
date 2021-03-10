@@ -46,9 +46,9 @@ unsigned char addMarker(void * data, void * marker, void * globalContext, void *
 					accept = iIndex != iIndex_ && jIndex != jIndex_;
 					if (accept){
 						iDelta_ = iIndex - iIndex_;
-						if (iDelta_ & DS) iDelta_ -= iDelta_ << 1; // 2 * iDelta_;
+						if (iDelta_ & DS) iDelta_ = 0 - iDelta_; // iDelta_ -= 2 * iDelta_; // iDelta_ -= iDelta_ << 1;
 						jDelta_ = jIndex - jIndex_;
-						if (jDelta_ & DS) jDelta_ -= jDelta_ << 1; // 2 * jDelta_;
+						if (jDelta_ & DS) jDelta_ = 0 - jDelta_; // jDelta_ -= 2 * jDelta_; // jDelta_ -= jDelta_ << 1;
 						accept = iDelta_ != jDelta_;
 					}
 				}
